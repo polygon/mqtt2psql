@@ -14,7 +14,7 @@
   in
   {
 
-    packages.x86_64-linux.mqtt2psqlbin = pkgs.writeShellScriptBin "mqtt2psql" ''
+    packages.x86_64-linux.mqtt2psqlbin = pkgs.writeShellScript "mqtt2psql" ''
       cd ${self}
       ${python-env}/bin/python -m mqtt2psql.mqtt2psql
     '';
